@@ -12,13 +12,12 @@ public class TestBase {
 	protected static WebDriver driver;
 	String driverPath = "c://driver//geckodriver.exe";
 	Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-	private String justLetterTheme = "HTP_JAVA_TAT3 Golosoff test letter " + timestamp;
 	
 	@BeforeClass
 	public void setup(){
 		System.setProperty("webdriver.gecko.driver", driverPath);
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	@AfterClass

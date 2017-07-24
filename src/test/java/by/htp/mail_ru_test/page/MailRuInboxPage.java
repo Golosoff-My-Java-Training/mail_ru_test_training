@@ -2,6 +2,8 @@ package by.htp.mail_ru_test.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MailRuInboxPage {
 
@@ -20,12 +22,8 @@ public class MailRuInboxPage {
 	}
 
 	public MailRuNewLetterPage goesToNewLetter() {
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable(newletter));
 		driver.findElement(newletter).click();
 		return new MailRuNewLetterPage(driver);
 	}

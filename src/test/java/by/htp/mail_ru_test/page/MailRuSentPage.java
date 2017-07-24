@@ -1,5 +1,5 @@
 package by.htp.mail_ru_test.page;
-//class="b-toolbar__btn b-toolbar__btn_disabled b-toolbar__btn_last js-shortcut"
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,6 +18,16 @@ public class MailRuSentPage {
 		System.out.println(driver.findElement(next).getAttribute("aria-disabled"));
 		
 		
+	}
+
+	public boolean checkForLetterIsPresent(String justLetterTheme) {
+		boolean isLetterPresentFlag = false;
+		String letterXpathLocator = ".//div[text() = '" + justLetterTheme + "']";
+		
+		if (driver.findElements(By.xpath(letterXpathLocator)).size() > 0){
+			isLetterPresentFlag = true;
+		}
+		return isLetterPresentFlag;
 	}
 
 }
