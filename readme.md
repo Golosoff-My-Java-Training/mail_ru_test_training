@@ -1,7 +1,5 @@
 # Golosoff
 
-![MyLogo](https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-1/p160x160/19284_1416961578603355_1105267254790165600_n.jpg?oh=a364371cfd9be6be710a146d5baaad26&oe=59FD1AF2)
-
 It's just a test task
 
 # test performs the following actions:
